@@ -82,6 +82,8 @@ window.top.location.href = window.location.href;
 </span>
 
 <!--ADcode starts here-->
+
+
 <!--adcode ends here-->
 
 <?php $hidden_class = '';
@@ -106,6 +108,9 @@ $hidden_class = 'hidden';
 </div>
 
 <!--Adcode starts here-->
+
+
+
 <!--Adcode ends here-->
 
 <?php if (!empty($banner_336x280)) : ?>
