@@ -163,7 +163,7 @@ document.getElementById('timer').innerHTML = countdown;
 if (countdown == 0) {
 clearInterval(interval);
 document.getElementById('countdown-message').innerHTML = 'Redirecting...';
-document.getElementById('go-submit').click();
+document.getElementById('go-link').submit();
 }
 }, 1000);
 </script>
