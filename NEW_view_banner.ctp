@@ -114,8 +114,7 @@ $this->assign('og_image', $link->image);
     <?php endif; ?>
 
     <div style="margin-bottom: 10px;">
-        <a href="javascript: void(0)" class="btn btn-success btn-lg get-link disabled">
-            <?= __('Please wait...') ?>
+        <a href="javascript: void(0)" class="btn btn-success btn-lg get-link">
         </a>
     </div>
     
@@ -173,4 +172,17 @@ $this->Form->button(__('Submit'), [
 <?php endif; ?>
 
 <?php $this->start('scriptBottom'); ?>
+<script>
+const timer = document.getElementById('timer');
+const countdown = parseInt(timer.textContent);
+let intervalId = setInterval(() => {
+countdown--;
+timer.textContent = countdown;
+if (countdown === 0) {
+clearInterval(intervalId);
+document.querySelector('.get-link').classList.remove('disabled');
+document.querySelector('.get-link').innerText = 'Get Link';
+}
+}, 1000); // 1 second interval
+</script>
 <?php $this->end(); ?>
